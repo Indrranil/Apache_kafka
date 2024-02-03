@@ -21,11 +21,18 @@ confluentinc/cp-kafka
 Replace <PRIVATE_IP> with your machine's private IP address. This command starts a Kafka container and connects it to the Zookeeper container.
 
 Step 3: Set Up Kafka Producer and Consumer
-
+```bash
 npm install
+```
 
+Step 4: Start Kafka Producer
+```bash
 node producer.js
+```
 
+This command starts the Kafka producer to send messages to the Kafka topic.
+```bash
 node consumer.js <GROUP_ID>
+```
 
 Replace <GROUP_ID> with the desired Kafka consumer group ID. This command starts the Kafka consumer to receive messages from the Kafka topic.
