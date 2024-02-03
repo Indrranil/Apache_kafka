@@ -6,16 +6,16 @@ async function init() {
   admin.connect();
   console.log("Adming Connection Success...");
 
-  console.log("Creating Topic [dodo-eating]");
+  console.log("Creating Topic [rider-updates]");
   await admin.createTopics({
     topics: [
       {
-        topic: "dodo-eating",
+        topic: "rider-updates",
         numPartitions: 2,
       },
     ],
   });
-  console.log("Topic Created Success [dodo-eating]");
+  console.log("Topic Created Success [rider-updates]");
 
   console.log("Disconnecting Admin..");
   await admin.disconnect();

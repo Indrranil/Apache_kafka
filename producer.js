@@ -17,14 +17,14 @@ async function init() {
   rl.prompt();
 
   rl.on("line", async function (line) {
-    const [what, state] = line.split(" ");
+    const [riderName, location] = line.split(" ");
     await producer.send({
-      topic: "dodo-updates",
+      topic: "rider-updates",
       messages: [
         {
-          partition: state.toLowerCase() === "hot" ? 0 : 1,
-          key: "dodo-update",
-          value: JSON.stringify({ name: what, state }),
+          partition: location.toLowerCase() === "north" ? 0 : 1,
+          key: "location-update",
+          value: JSON.stringify({ name: riderName, location }),
         },
       ],
     });
