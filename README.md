@@ -6,16 +6,17 @@ This guide walks you through setting up Apache Kafka with Zookeeper using Docker
 
 ```bash
 docker run -p 2181:2181 zookeeper
-
+```
 
 Step 2: Run Kafka Container
 
+```bash
 docker run -p 9092:9092 \
 -e KAFKA_ZOOKEEPER_CONNECT=<PRIVATE_IP>:2181 \
 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://<PRIVATE_IP>:9092 \
 -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \
 confluentinc/cp-kafka
-
+```
 
 Replace <PRIVATE_IP> with your machine's private IP address. This command starts a Kafka container and connects it to the Zookeeper container.
 
