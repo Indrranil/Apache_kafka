@@ -1,8 +1,8 @@
 # Apache Kafka with Zookeeper using Docker
 
-This guide walks you through setting up Apache Kafka with Zookeeper using Docker containers.
+This guide walkthrough setting up Apache Kafka with Zookeeper using Docker containers.
 
-## Step 1: Run Zookeeper Container
+## Step 1: Run Zookeeper Container 
 
 ```bash
 docker run -p 2181:2181 zookeeper
